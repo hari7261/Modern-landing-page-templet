@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+/* Reset some default styles */
+body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x600') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+        }
+
+/* Main container styling */
+.faq-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom right, #ffffff, #eaeaea);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+/* Search bar styling */
+.search-bar {
+    position: relative;
+    margin: 20px 0;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 20px;
+    border: 2px solid #007bff;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #0056b3;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Accordion styling */
+.accordion-button {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.accordion-button:hover {
+    background-color: #0056b3;
+}
+
+.accordion-button i {
+    margin-right: 10px;
+}
+
+/* Accordion answer styling */
+.accordion-body {
+    background-color: #f1f1f1;
+    border-left: 5px solid #007bff;
+    border-radius: 0 0 8px 8px;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-body:hover {
+    background-color: #eaeaea;
+}
+
+/* Category heading styling */
+.faq-category h3 {
+    margin: 20px 0 10px;
+    color: #007bff;
+    font-size: 1.8em;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+/* Icon styling */
+.faq-icon {
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.faq-icon:hover {
+    color: #0056b3;
+}
+
+/* Button styling for potential action buttons */
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+    </style>
+</head>
+
+<body>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img src="https://via.placeholder.com/150x50" alt="Logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <div class="container faq-section">
+        <h1 class="faq-title text-primary">Frequently Asked Questions</h1>
+
+        <!-- Search Bar -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="input-group search-bar">
+                    <input type="text" class="form-control" placeholder="Search FAQs..." aria-label="Search FAQs">
+                    <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Categories -->
+        <div class="faq-category">
+            <h3 class="text-secondary">General Questions</h3>
+            <div class="accordion" id="faqGeneral">
+                <!-- Question 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <i class="faq-icon fas fa-question-circle"></i> What is your return policy?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#faqGeneral">
+                        <div class="accordion-body">
+                            Our return policy allows you to return items within 30 days of purchase for a full refund.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <i class="faq-icon fas fa-question-circle"></i> How do I track my order?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#faqGeneral">
+                        <div class="accordion-body">
+                            You can track your order using the tracking link provided in your confirmation email.
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more questions here -->
+                <!-- Question 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <i class="faq-icon fas fa-question-circle"></i> Do you offer international shipping?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#faqGeneral">
+                        <div class="accordion-body">
+                            Yes, we offer international shipping to select countries. Please check our shipping policy
+                            for more details.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <i class="faq-icon fas fa-question-circle"></i> How can I contact customer service?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#faqGeneral">
+                        <div class="accordion-body">
+                            You can contact customer service via our contact form or call us at (123) 456-7890.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            <i class="faq-icon fas fa-question-circle"></i> Can I change my order after it has been
+                            placed?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                        data-bs-parent="#faqGeneral">
+                        <div class="accordion-body">
+                            Yes, you can change your order within 1 hour of placing it. Please contact our support team
+                            to assist you.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more categories as needed -->
+        <div class="faq-category">
+            <h3 class="text-secondary">Payment Questions</h3>
+            <div class="accordion" id="faqPayment">
+                <!-- Question 6 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            <i class="faq-icon fas fa-question-circle"></i> What payment methods do you accept?
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                        data-bs-parent="#faqPayment">
+                        <div class="accordion-body">
+                            We accept all major credit cards, PayPal, and bank transfers.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 7 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeven">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            <i class="faq-icon fas fa-question-circle"></i> Is it safe to use my credit card on your
+                            website?
+                        </button>
+                    </h2>
+                    <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+                        data-bs-parent="#faqPayment">
+                        <div class="accordion-body">
+                            Yes, our website is secured with SSL encryption to ensure your payment information is safe.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 8 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEight">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            <i class="faq-icon fas fa-question-circle"></i> Can I get a receipt for my purchase?
+                        </button>
+                    </h2>
+                    <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+                        data-bs-parent="#faqPayment">
+                        <div class="accordion-body">
+                            Yes, you will receive a receipt via email after your purchase is completed.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 9 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNine">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            <i class="faq-icon fas fa-question-circle"></i> What should I do if my payment is declined?
+                        </button>
+                    </h2>
+                    <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
+                        data-bs-parent="#faqPayment">
+                        <div class="accordion-body">
+                            If your payment is declined, please check your payment information and try again. You can
+                            also contact your bank for assistance.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 10 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTen">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                            <i class="faq-icon fas fa-question-circle"></i> Can I change my payment method after placing
+                            an order?
+                        </button>
+                    </h2>
+                    <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+                        data-bs-parent="#faqPayment">
+                        <div class="accordion-body">
+                            Yes, you can change your payment method within one hour of placing your order by contacting
+                            customer service.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h3 class="text-secondary">Shipping Questions</h3>
+            <div class="accordion" id="faqShipping">
+                <!-- Question 11 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEleven">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                            <i class="faq-icon fas fa-question-circle"></i> How much does shipping cost?
+                        </button>
+                    </h2>
+                    <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven"
+                        data-bs-parent="#faqShipping">
+                        <div class="accordion-body">
+                            Shipping costs vary based on the destination and weight of the package. You can calculate
+                            shipping costs at checkout.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 12 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwelve">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                            <i class="faq-icon fas fa-question-circle"></i> When will my order arrive?
+                        </button>
+                    </h2>
+                    <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve"
+                        data-bs-parent="#faqShipping">
+                        <div class="accordion-body">
+                            Delivery times vary depending on your location. You can find estimated delivery times at
+                            checkout.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 13 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThirteen">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                            <i class="faq-icon fas fa-question-circle"></i> What should I do if my order is delayed?
+                        </button>
+                    </h2>
+                    <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen"
+                        data-bs-parent="#faqShipping">
+                        <div class="accordion-body">
+                            If your order is delayed, please check your tracking information or contact our support team
+                            for assistance.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 14 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFourteen">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                            <i class="faq-icon fas fa-question-circle"></i> Can I change my shipping address after
+                            placing an order?
+                        </button>
+                    </h2>
+                    <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen"
+                        data-bs-parent="#faqShipping">
+                        <div class="accordion-body">
+                            Yes, you can change your shipping address within one hour of placing your order by
+                            contacting customer service.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 15 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFifteen">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+                            <i class="faq-icon fas fa-question-circle"></i> Do you offer free shipping?
+                        </button>
+                    </h2>
+                    <div id="collapseFifteen" class="accordion-collapse collapse" aria-labelledby="headingFifteen"
+                        data-bs-parent="#faqShipping">
+                        <div class="accordion-body">
+                            Yes, we offer free shipping on orders over $50 within the continental US.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h3 class="text-secondary">Product Questions</h3>
+            <div class="accordion" id="faqProduct">
+                <!-- Question 16 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSixteen">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen">
+                            <i class="faq-icon fas fa-question-circle"></i> Are your products guaranteed?
+                        </button>
+                    </h2>
+                    <div id="collapseSixteen" class="accordion-collapse collapse" aria-labelledby="headingSixteen"
+                        data-bs-parent="#faqProduct">
+                        <div class="accordion-body">
+                            Yes, all our products come with a satisfaction guarantee. If you are not satisfied, you can
+                            return it within 30 days.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 17 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSeventeen">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+                            <i class="faq-icon fas fa-question-circle"></i> Do you offer product warranties?
+                        </button>
+                    </h2>
+                    <div id="collapseSeventeen" class="accordion-collapse collapse" aria-labelledby="headingSeventeen"
+                        data-bs-parent="#faqProduct">
+                        <div class="accordion-body">
+                            Yes, many of our products come with a manufacturer's warranty. Please check the product
+                            details for warranty information.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 18 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingEighteen">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseEighteen" aria-expanded="false" aria-controls="collapseEighteen">
+                            <i class="faq-icon fas fa-question-circle"></i> Can I get a demo of the product?
+                        </button>
+                    </h2>
+                    <div id="collapseEighteen" class="accordion-collapse collapse" aria-labelledby="headingEighteen"
+                        data-bs-parent="#faqProduct">
+                        <div class="accordion-body">
+                            Yes, we offer demos for select products. Please contact us for more information on
+                            scheduling a demo.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 19 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingNineteen">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseNineteen" aria-expanded="false" aria-controls="collapseNineteen">
+                            <i class="faq-icon fas fa-question-circle"></i> How do I care for my products?
+                        </button>
+                    </h2>
+                    <div id="collapseNineteen" class="accordion-collapse collapse" aria-labelledby="headingNineteen"
+                        data-bs-parent="#faqProduct">
+                        <div class="accordion-body">
+                            Care instructions vary by product. Please refer to the product's care label or manual for
+                            specific instructions.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 20 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwenty">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwenty" aria-expanded="false" aria-controls="collapseTwenty">
+                            <i class="faq-icon fas fa-question-circle"></i> Where are your products made?
+                        </button>
+                    </h2>
+                    <div id="collapseTwenty" class="accordion-collapse collapse" aria-labelledby="headingTwenty"
+                        data-bs-parent="#faqProduct">
+                        <div class="accordion-body">
+                            Our products are manufactured in various locations around the world. Each product page
+                            specifies its origin.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h3 class="text-secondary">Account Questions</h3>
+            <div class="accordion" id="faqAccount">
+                <!-- Question 21 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwentyOne">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwentyOne" aria-expanded="false" aria-controls="collapseTwentyOne">
+                            <i class="faq-icon fas fa-question-circle"></i> How do I create an account?
+                        </button>
+                    </h2>
+                    <div id="collapseTwentyOne" class="accordion-collapse collapse" aria-labelledby="headingTwentyOne"
+                        data-bs-parent="#faqAccount">
+                        <div class="accordion-body">
+                            To create an account, click on the "Sign Up" button and fill out the registration form.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 22 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwentyTwo">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwentyTwo" aria-expanded="false" aria-controls="collapseTwentyTwo">
+                            <i class="faq-icon fas fa-question-circle"></i> How do I reset my password?
+                        </button>
+                    </h2>
+                    <div id="collapseTwentyTwo" class="accordion-collapse collapse" aria-labelledby="headingTwentyTwo"
+                        data-bs-parent="#faqAccount">
+                        <div class="accordion-body">
+                            To reset your password, click on "Forgot Password" and follow the instructions sent to your
+                            email.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 23 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwentyThree">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwentyThree" aria-expanded="false"
+                            aria-controls="collapseTwentyThree">
+                            <i class="faq-icon fas fa-question-circle"></i> How do I delete my account?
+                        </button>
+                    </h2>
+                    <div id="collapseTwentyThree" class="accordion-collapse collapse"
+                        aria-labelledby="headingTwentyThree" data-bs-parent="#faqAccount">
+                        <div class="accordion-body">
+                            To delete your account, please contact our support team for assistance.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 24 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwentyFour">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwentyFour" aria-expanded="false"
+                            aria-controls="collapseTwentyFour">
+                            <i class="faq-icon fas fa-question-circle"></i> How do I update my account information?
+                        </button>
+                    </h2>
+                    <div id="collapseTwentyFour" class="accordion-collapse collapse" aria-labelledby="headingTwentyFour"
+                        data-bs-parent="#faqAccount">
+                        <div class="accordion-body">
+                            You can update your account information in the "Account Settings" section after logging in.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 25 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwentyFive">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwentyFive" aria-expanded="false"
+                            aria-controls="collapseTwentyFive">
+                            <i class="faq-icon fas fa-question-circle"></i> Can I have multiple accounts?
+                        </button>
+                    </h2>
+                    <div id="collapseTwentyFive" class="accordion-collapse collapse" aria-labelledby="headingTwentyFive"
+                        data-bs-parent="#faqAccount">
+                        <div class="accordion-body">
+                            We recommend having only one account to keep your order history and preferences organized.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="faq-category">
+            <h3 class="text-secondary">Technical Questions</h3>
+            <div class="accordion" id="faqTechnical">
+                <!-- Question 26 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwentySix">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwentySix" aria-expanded="false" aria-controls="collapseTwentySix">
+                            <i class="faq-icon fas fa-question-circle"></i> What should I do if I encounter an error?
+                        </button>
+                    </h2>
+                    <div id="collapseTwentySix" class="accordion-collapse collapse" aria-labelledby="headingTwentySix"
+                        data-bs-parent="#faqTechnical">
+                        <div class="accordion-body">
+                            If you encounter an error, please try refreshing the page. If the issue persists, contact
+                            our support team.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 27 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwentySeven">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwentySeven" aria-expanded="false"
+                            aria-controls="collapseTwentySeven">
+                            <i class="faq-icon fas fa-question-circle"></i> How do I clear my browser cache?
+                        </button>
+                    </h2>
+                    <div id="collapseTwentySeven" class="accordion-collapse collapse"
+                        aria-labelledby="headingTwentySeven" data-bs-parent="#faqTechnical">
+                        <div class="accordion-body">
+                            You can clear your browser cache in the settings menu of your browser. Each browser has a
+                            different process.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 28 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwentyEight">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwentyEight" aria-expanded="false"
+                            aria-controls="collapseTwentyEight">
+                            <i class="faq-icon fas fa-question-circle"></i> What browsers are supported?
+                        </button>
+                    </h2>
+                    <div id="collapseTwentyEight" class="accordion-collapse collapse"
+                        aria-labelledby="headingTwentyEight" data-bs-parent="#faqTechnical">
+                        <div class="accordion-body">
+                            We support the latest versions of Chrome, Firefox, Safari, and Edge.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 29 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwentyNine">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwentyNine" aria-expanded="false"
+                            aria-controls="collapseTwentyNine">
+                            <i class="faq-icon fas fa-question-circle"></i> Is there a mobile app available?
+                        </button>
+                    </h2>
+                    <div id="collapseTwentyNine" class="accordion-collapse collapse" aria-labelledby="headingTwentyNine"
+                        data-bs-parent="#faqTechnical">
+                        <div class="accordion-body">
+                            Yes, we have a mobile app available for both Android and iOS. You can download it from the
+                            respective app stores.
+                        </div>
+                    </div>
+                </div>
+                <!-- Question 30 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThirty">
+                        <button class="accordion-button collapsed faq-card" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThirty" aria-expanded="false" aria-controls="collapseThirty">
+                            <i class="faq-icon fas fa-question-circle"></i> How do I contact technical support?
+                        </button>
+                    </h2>
+                    <div id="collapseThirty" class="accordion-collapse collapse" aria-labelledby="headingThirty"
+                        data-bs-parent="#faqTechnical">
+                        <div class="accordion-body">
+                            You can contact technical support through our help center or by sending an email to
+                            support@example.com.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
